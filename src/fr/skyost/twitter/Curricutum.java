@@ -25,7 +25,7 @@ import twitter4j.auth.RequestToken;
 
 public class Curricutum {
 	
-	private static final String VERSION = "0.1";
+	private static final String VERSION = "0.1.1";
 	private static final Properties PROPERTIES = new Properties();
 	
 	private static AccessToken accessToken;
@@ -42,6 +42,7 @@ public class Curricutum {
 			}
 			else {
 				JOptionPane.showMessageDialog(null, "You must have a desktop to run this application.", "Curricutum", JOptionPane.ERROR_MESSAGE);
+				return;
 			}
 			final String pin = (String)JOptionPane.showInputDialog(null, "<html>A page has been opened on your default browser.<br>Please authorize the application and enter the PIN (if available) or just hit enter :</html>", "Curricutum", JOptionPane.PLAIN_MESSAGE, new ImageIcon(Curricutum.class.getResource("/fr/skyost/twitter/res/CV.png")), null, null);
 			if(pin != null) {
